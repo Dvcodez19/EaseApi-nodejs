@@ -1,0 +1,29 @@
+{
+  "name": "ventura-easeapi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./lib/",
+  "scripts": {
+    "start": "node run_apis.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/venturasecurities-oss/easeapi-nodejs.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.7.9",
+    "crypto-js": "^4.2.0",
+    "papaparse": "^5.5.2"
+  },
+  "directories": {
+    "example": "examples",
+    "lib": "lib"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/venturasecurities-oss/easeapi-nodejs/issues"
+  },
+  "homepage": "https://github.com/venturasecurities-oss/easeapi-nodejs#readme"
+}

@@ -1,0 +1,5 @@
+/node_modules/
+/.conda/
+/.idea/
+.DS_Store
+.DS_Store?
