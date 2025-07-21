@@ -1,7 +1,7 @@
 {
   "name": "ventura-easeapi",
   "version": "1.0.0",
-  "description": "",
+  "description": "[![npm version](https://badge.fury.io/js/easeapi.svg)](https://badge.fury.io/js/easeapi)\r   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)",
   "main": "./lib/",
   "scripts": {
     "start": "node run_apis.js"
@@ -15,10 +15,10 @@
   "dependencies": {
     "axios": "^1.7.9",
     "crypto-js": "^4.2.0",
-    "papaparse": "^5.5.2"
+    "papaparse": "^5.5.2",
+    "ws": "^8.18.3"
   },
   "directories": {
-    "example": "examples",
     "lib": "lib"
   },
   "keywords": [],
