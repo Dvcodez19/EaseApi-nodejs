@@ -38,7 +38,7 @@ async function on_connect(ws, response) {
 
   // For market data connection :
   if (ws.ws_url === ws.market_data_url) {
-    await ws.subscribe([`2885`], ws.EXCHANGE_NSE); // RELIANCE, TCS on NSE
+    await ws.subscribe([`2885`,`11536`], ws.EXCHANGE_NSE); // RELIANCE, TCS on NSE
     await ws.subscribe([`500570`],ws.EXCHANGE_BSE); // TATAMOTORS on BSE
   }
 
