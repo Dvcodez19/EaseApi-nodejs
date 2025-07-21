@@ -1,17 +1,6 @@
 // importing libraries :
 const WebSocket = require(`ws`);
 const EaseApiTicker = require(`./lib/easeapi-ticker`);
-const log = {
-  info: (...args) => {
-    console.info(new Date().toISOString(), `- INFO -`, ...args)
-  },
-  warn: (...args) => {
-    console.warn(new Date().toISOString(), `- WARN -`, ...args)
-  },
-  error: (...args) => {
-    console.error(new Date().toISOString(), `- ERROR -`, ...args)
-  },
-};
 
 // market data ticker : 
 ticker = new EaseApiTicker(
@@ -29,12 +18,12 @@ order_ticker = new EaseApiTicker(
 
 // Defining your (user's) tick callback :
 async function on_ticks(ws, data) {
-  log.info(data);
+  console.info(data);
 }
 
 // Defining your (user's) on_connect callback :
 async function on_connect(ws, response) {
-  log.info(`Connected`);
+  console.info(`Connected`);
 
   // For market data connection :
   if (ws.ws_url === ws.market_data_url) {
@@ -44,14 +33,14 @@ async function on_connect(ws, response) {
 
   // For order status connection :
   else if (ws.ws_url === ws.order_status_url) {
-    log.info(`Connected to order status WebSocket`);
+    console.info(`Connected to order status WebSocket`);
     // order status websocket it will push updates automatically
   }
 }
 
 // Defining your (user's) on_close callback :
 async function on_close(ws, close_status_code, close_msg) {
-  log.info(`Disconnected : ` + close_msg);
+  console.info(`Disconnected : ` + close_msg);
 }
 
 // Set callbacks for market data :
